@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Attach click listeners to all project card elements
+    // Attach click listeners to all interactive card/button elements
     const projectCards = document.querySelectorAll('.project-card-img, .project-card-btn');
     projectCards.forEach(card => {
         card.addEventListener('click', () => {
