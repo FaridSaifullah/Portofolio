@@ -219,6 +219,15 @@
                     <p class="text-xs text-slate-400 mt-1">Advanced Functions</p>
                 </div>
 
+                <!-- Skill Card Baru: Pandas (Python) -->
+                   <div class="glass-card p-6 rounded-2xl text-center border border-slate-800 glow-hover flex flex-col items-center justify-center group">
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 border border-slate-700/60 p-2.5 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-amber-500/50 transition-all duration-300">
+                        <img src="Foto/Python_logo.png" alt="Python" class="w-full h-full object-contain">
+                    </div>
+                    <h4 class="font-bold text-white text-base">Python (Pandas)</h4>
+                    <p class="text-xs text-slate-400 mt-1">Data Manipulation & Analysis</p>
+                </div>
+
                 <!-- Skill 4: MikroTik -->
                 <div class="glass-card p-6 rounded-2xl text-center border border-slate-800 glow-hover flex flex-col items-center justify-center group">
                     <div class="w-16 h-16 rounded-2xl bg-white p-2 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-rose-500/50 transition-all duration-300 shadow-md">
@@ -238,6 +247,7 @@
                 </div>
 
                 <!-- Skill 6: Troubleshooting -->
+            <div class="col-span-full flex justify-center">
                 <div class="glass-card p-6 rounded-2xl text-center border border-slate-800 glow-hover flex flex-col items-center justify-center group">
                     <div class="w-16 h-16 rounded-2xl bg-white/5 border border-slate-700/60 p-2 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-sky-500/50 transition-all duration-300">
                         <img src="Foto/TR.png" alt="Troubleshooting" class="w-full h-full object-contain filter invert brightness-200">
@@ -245,7 +255,7 @@
                     <h4 class="font-bold text-white text-base">Troubleshooting</h4>
                     <p class="text-xs text-slate-400 mt-1">Hardware & Software</p>
                 </div>
-
+             </div>
             </div>
         </div>
     </section>
@@ -644,22 +654,34 @@
         <p>&copy; 2026 Farid Saifullah. All Rights Reserved.</p>
     </footer>
 
-    <!-- Image / Project Modal -->
-    <div id="image-modal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6">
+   <!-- 1. Modal Khusus Gambar Saja (Diakses via klik area "Perbesar Gambar") -->
+    <div id="image-only-modal" class="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-md hidden flex flex-col items-center justify-center p-2 sm:p-6 transition-all duration-300">
+        <div class="relative max-w-6xl w-full flex flex-col items-center justify-center max-h-[95vh]">
+            <button id="img-modal-close-btn" class="absolute -top-12 right-0 z-10 w-10 h-10 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center text-xl transition-all border border-slate-700 shadow-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="img-only-title" class="text-sm sm:text-base font-semibold text-slate-300 mb-3 text-center px-4"></h3>
+            <div class="w-full flex justify-center items-center overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/80 p-2 shadow-2xl">
+                <img id="img-only-src" src="" alt="Perbesar Gambar" class="w-full h-auto max-h-[82vh] object-contain rounded-xl">
+            </div>
+            <p class="text-slate-500 text-xs mt-3">Klik di luar gambar atau tekan ESC untuk menutup</p>
+        </div>
+    </div>
+
+    <!-- 2. Modal Detail Lengkap Gambar + Teks (Diakses via tombol "Detail Analysis / Lihat Sertifikat") -->
+    <div id="detail-modal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6">
         <div class="relative max-w-4xl w-full glass-card border border-slate-700 rounded-2xl overflow-hidden max-h-[90vh] flex flex-col">
-            <!-- Modal Header -->
             <div class="p-4 sm:p-6 border-b border-slate-800 flex items-center justify-between">
-                <h3 id="modal-title" class="text-lg font-bold text-white"></h3>
-                <button id="modal-close-btn" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+                <h3 id="detail-title" class="text-lg font-bold text-white"></h3>
+                <button id="detail-close-btn" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-            <!-- Modal Body -->
             <div class="p-4 sm:p-6 overflow-y-auto space-y-4">
                 <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-900">
-                    <img id="modal-img" src="" alt="Preview" class="w-full h-auto max-h-[60vh] object-contain mx-auto">
+                    <img id="detail-img" src="" alt="Preview" class="w-full h-auto max-h-[55vh] object-contain mx-auto">
                 </div>
-                <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed"></p>
+                <p id="detail-desc" class="text-slate-300 text-sm leading-relaxed"></p>
             </div>
         </div>
     </div>
