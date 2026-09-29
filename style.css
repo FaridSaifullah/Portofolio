@@ -14,21 +14,28 @@
     box-shadow: 0 0 25px rgba(2, 132, 199, 0.4);
     border-color: rgba(56, 189, 248, 0.5);
 }
+/* Efek timbul dan menyala untuk semua kartu secara otomatis */
+.glass-card, .glow-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.glass-card:hover, .glow-hover:hover {
+    transform: translateY(-8px) !important; /* Efek timbul ke atas */
+    box-shadow: 0 20px 30px -10px rgba(14, 165, 233, 0.25) !important; /* Bayangan menyala biru */
+    border-color: rgba(56, 189, 248, 0.4) !important; /* Garis tepi menyala */
+}
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-    background: #020617;
+    background: #f8fafc; /* bg-slate-50 */
 }
-
 ::-webkit-scrollbar-thumb {
-    background: #1e293b;
+    background: #cbd5e1; /* slate-300 */
     border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #38bdf8;
+    background: #94a3b8; /* slate-400 */
 }
